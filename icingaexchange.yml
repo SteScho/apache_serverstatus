@@ -1,8 +1,8 @@
 name: apache_serverstatus
 description: "file:///README.md"
 url: "https://github.com/SteScho/apache_serverstatus"
-tags: apache,server-status
+tags: apache,server-status,mod_status
 vendor: apache,asf
 target: apache
 type: Plugin
-license: mit
+license: MIT
