@@ -35,7 +35,7 @@ WARNING APACHE SERVER STATUS Wait=8, Start=0, Read=0, Send=1, Keepalive=1, DNS=0
 ```
 
 ###### apache 2.2
-![Screenshot apache 2.2](/screenshots/diagramm-1.png?raw=true "Apache 2.2")
+![Screenshot apache 2.2](https://raw.githubusercontent.com/SteScho/apache_serverstatus/master/screenshots/diagramm-1.png?raw=true "Apache 2.2")
 
 ###### apache 2.4 with ReqPerSec, BytesPerReq and BytesPerSec
-![Screenshot apache 2.4](/screenshots/diagramm-2.png?raw=true "Apache 2.4")
+![Screenshot apache 2.4](https://raw.githubusercontent.com/SteScho/apache_serverstatus/master/screenshots/diagramm-2.png?raw=true "Apache 2.4")
