@@ -53,7 +53,7 @@ WARNING APACHE SERVER STATUS Wait=8, Start=0, Read=0, Send=1, Keepalive=1, DNS=0
 
 You want to know in detail what happens? Use -v Flag!
 ```
-./check_apache_serverstatus# ./check_apache_serverstatus.pl --wc=.,@130,@145 --wc=BytesPerSec,1000,2000 -v
+./check_apache_serverstatus.pl --wc=.,@130,@145 --wc=BytesPerSec,1000,2000 -v
 $options = {
              'verbose' => 1,
              'hostname' => 'localhost',
