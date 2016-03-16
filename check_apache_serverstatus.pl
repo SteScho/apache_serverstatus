@@ -36,7 +36,6 @@ use warnings;
 
 use Data::Dumper;
 use Getopt::Long qw(:config bundling); # insert debug for much more infos ;)
-use Pod::Usage qw(pod2usage);
 
 
 # define constants
