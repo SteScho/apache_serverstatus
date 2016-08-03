@@ -28,7 +28,8 @@
 # Feel free to contact me via email: schoch@dsb-its.net
 #
 
-# 2016-01-## schoch - 1.0 - Init...
+# 2016-08-03, schoch: 1.1 - changes for new apache version 2.4.x
+# 2016-01-##, schoch: 1.0 - Init...
 
 
 use strict;
@@ -119,7 +120,7 @@ open PH, sprintf('%s %s %s |',
 ) or mydie('Can not open server-status: ' . $!);
   
 # read and cut data
-my %lineData = map { split /:\s*/ } split /\n/, <PH>;
+my %lineData = map { (split /:\s*/)[0..1] } split /\n/, <PH>;
 close PH;
 print Data::Dumper->Dump([\%lineData], ['server-status'])
 	if $options->{'verbose'};
@@ -174,9 +175,9 @@ if(
   and exists $lineData{'BytesPerReq'}
 ) {
   $result .= sprintf ' RATES %s=%s, %s=%s, %s=%s', 
-    (map { $_, $lineData{$_} } qw(ReqPerSec BytesPerSec BytesPerReq)) x 2;
+    (map { $_, $lineData{$_} } qw(ReqPerSec BytesPerSec BytesPerReq));
   $perfData .= sprintf ' %s=%s %s=%s %s=%s', 
-    (map { $_, $lineData{$_} } qw(ReqPerSec BytesPerSec BytesPerReq)) x 2;
+    (map { $_, $lineData{$_} } qw(ReqPerSec BytesPerSec BytesPerReq));
 }
 
 # check for warning and critical
