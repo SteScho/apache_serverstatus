@@ -76,7 +76,7 @@ my $goodOpt = GetOptions(
 	'warncrit=s'	=> \@{$options->{'warncrit'}},
 
 	'wget'				=> \$options->{'wget'},
-	'woptions'  	=> \$options->{'wget-options'},
+	'woptions=s'  	=> \$options->{'wget-options'},
 
 	'u=s'					=> \$options->{'url'},
 	'url=s'				=> \$options->{'url'},
