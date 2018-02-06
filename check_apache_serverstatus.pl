@@ -208,7 +208,7 @@ printf "Check overall status: %d\n", $status
 
 
 # print result
-printf "%s APACHE SERVER STATUS %s|%s\n",
+printf "APACHE SERVER STATUS %s - %s|%s\n",
   $status == 0 ? 'OK' : $status == 1
     ? 'WARNING' : $status == 2
     ? 'CRITICAL' : 'UNKNOWN',
