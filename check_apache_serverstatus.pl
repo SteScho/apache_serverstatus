@@ -144,7 +144,7 @@ foreach(keys %$data) {
 }
 
 # print result
-my $result = '';
+my $result = $lineData{'ServerMPM'} ? sprintf('MPM=%s', $lineData{'ServerMPM'}) : '';
 my $perfData = '';
 my @statList = qw(_ S R W K D C L G I .);
 my $stats = {
@@ -178,6 +178,8 @@ if(
     (map { $_, $lineData{$_} } qw(ReqPerSec BytesPerSec BytesPerReq));
   $perfData .= sprintf ' %s=%s %s=%s %s=%s',
     (map { $_, $lineData{$_} } qw(ReqPerSec BytesPerSec BytesPerReq));
+  $perfData .= sprintf ' Total_Accesses=%sc', $lineData{"Total Accesses"};
+  $perfData .= sprintf ' Total_kBytes=%s', $lineData{"Total kBytes"};
 }
 
 # check for warning and critical
