@@ -131,7 +131,7 @@ if(exists $lineData{'Scoreboard'}) {
   $data->{$1}++ while $lineData{'Scoreboard'} =~ m/(.)/og;
 } else {
   # Not found...
-  print 'No usefull data found';
+  print 'No useful data found';
   exit STAT_UNKNOWN;
 }
 print Data::Dumper->Dump([$data], ['scoreboard'])
