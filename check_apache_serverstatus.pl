@@ -28,6 +28,7 @@
 # Feel free to contact me via email: schoch@dsb-its.net
 #
 
+# 2018-02-06, sni: 1.2 - fixed some bugs and typos, add some output - Thank you!
 # 2016-08-03, schoch: 1.1 - changes for new apache version 2.4.x
 # 2016-01-##, schoch: 1.0 - Init...
 
